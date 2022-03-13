@@ -10,25 +10,25 @@ import java.util.Map;
 
 public class AddAddressForm extends AbstractPage {
 
-    @FindBy(css = "input#firstname")
+    @FindBy(id = "firstname")
     private WebElement firstNameInput;
-    @FindBy(css = "input#lastname")
+    @FindBy(id = "lastname")
     private WebElement lastNameInput;
-    @FindBy(css = "input#address1")
+    @FindBy(id = "address1")
     private WebElement addressInput;
-    @FindBy(css = "input#city")
+    @FindBy(id = "city")
     private WebElement cityInput;
-    @FindBy(css = "select#id_state")
+    @FindBy(id = "id_state")
     private WebElement stateWebElement;
-    @FindBy(css = "input#postcode")
+    @FindBy(id = "postcode")
     private WebElement postCodeInput;
-    @FindBy(css = "select#id_country")
+    @FindBy(id = "id_country")
     private WebElement countryWebElement;
-    @FindBy(css = "input#phone")
+    @FindBy(id = "phone")
     private WebElement phoneInput;
-    @FindBy(css = "input#alias")
+    @FindBy(id = "alias")
     private WebElement aliasInput;
-    @FindBy(css = "button#submitAddress")
+    @FindBy(id = "submitAddress")
     private WebElement submitButton;
 
     public AddAddressForm(WebDriver driver) {

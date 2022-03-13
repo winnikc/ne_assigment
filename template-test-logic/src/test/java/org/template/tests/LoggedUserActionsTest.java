@@ -10,7 +10,6 @@ import org.template.model.User;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.UUID;
 import java.util.stream.Collectors;
 
 public class LoggedUserActionsTest extends AbstractTest {
@@ -61,17 +60,17 @@ public class LoggedUserActionsTest extends AbstractTest {
 
     private Map<String, String> getNewAddressData() {
         Map<String, String> newAddressData = new HashMap<>();
-        newAddressData.put("firstname", "NE");
-        newAddressData.put("lastname", "Assignment");
-        newAddressData.put("address1", "Testowa1");
-        newAddressData.put("city", "Nowe P");
-        newAddressData.put("id_state", "43");
-        newAddressData.put("postcode", "00000");
-        newAddressData.put("id_country", "21");
-        newAddressData.put("phone", "123456789");
-        newAddressData.put("id_address", "0");
-        newAddressData.put("select_address", "0");
-        newAddressData.put("alias", UUID.randomUUID().toString().substring(0,30));
+        newAddressData.put("firstname", user.getFirstName());
+        newAddressData.put("lastname", user.getLastName());
+        newAddressData.put("address1", user.getAddress1());
+        newAddressData.put("city", user.getCity());
+        newAddressData.put("id_state", user.getId_state());
+        newAddressData.put("postcode", user.getPostcode());
+        newAddressData.put("id_country", user.getId_country());
+        newAddressData.put("phone", user.getPhone());
+        newAddressData.put("id_address", user.getId_address());
+        newAddressData.put("select_address", user.getSelect_address());
+        newAddressData.put("alias", user.getAlias());
 
         return newAddressData;
     }
@@ -81,6 +80,6 @@ public class LoggedUserActionsTest extends AbstractTest {
         myAccountPage
                 .openMyAdresses()
                 .openAddingAddressForm()
-                .fillAndSendFormUsing(newAddressData);
+                .fillAndSendFormUsing(getNewAddressData());
     }
 }

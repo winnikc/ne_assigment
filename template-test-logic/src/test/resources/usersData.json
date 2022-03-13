@@ -6,7 +6,17 @@
   "PRD": [
     {
       "email": "test@nowaera.pl",
-      "password": "1qaz!QAZ"
+      "password": "1qaz!QAZ",
+      "firstName": "NE",
+      "lastName": "Assignment",
+      "address1": "Testowa1",
+      "city": "Nowe P",
+      "id_state": "43",
+      "postcode": "00000",
+      "id_country": "21",
+      "phone": "123456789",
+      "id_address": "0",
+      "select_address": "0"
     }
   ]
 }

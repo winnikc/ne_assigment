@@ -8,7 +8,7 @@ import org.template.components.header.Header;
 
 public class HomePage extends AbstractPage {
 
-    @FindBy(xpath = "//a[@class='login']")
+    @FindBy(className = "login")
     private WebElement singInButton;
 
     public HomePage(WebDriver driver) {
